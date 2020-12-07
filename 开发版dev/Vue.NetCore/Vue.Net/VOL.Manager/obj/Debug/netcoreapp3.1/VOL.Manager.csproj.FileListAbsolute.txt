@@ -1,0 +1,14 @@
+E:\GitHub\Vue.NetCore\开发版dev\Vue.NetCore\Vue.Net\VOL.Manager\obj\Debug\netcoreapp3.1\VOL.Manager.csprojAssemblyReference.cache
+E:\GitHub\Vue.NetCore\开发版dev\Vue.NetCore\Vue.Net\VOL.Manager\obj\Debug\netcoreapp3.1\VOL.Manager.AssemblyInfoInputs.cache
+E:\GitHub\Vue.NetCore\开发版dev\Vue.NetCore\Vue.Net\VOL.Manager\obj\Debug\netcoreapp3.1\VOL.Manager.AssemblyInfo.cs
+E:\GitHub\Vue.NetCore\开发版dev\Vue.NetCore\Vue.Net\VOL.Manager\obj\Debug\netcoreapp3.1\VOL.Manager.csproj.CoreCompileInputs.cache
+E:\GitHub\Vue.NetCore\开发版dev\Vue.NetCore\Vue.Net\VOL.Manager\bin\Debug\netcoreapp3.1\VOL.Manager.deps.json
+E:\GitHub\Vue.NetCore\开发版dev\Vue.NetCore\Vue.Net\VOL.Manager\bin\Debug\netcoreapp3.1\VOL.Manager.dll
+E:\GitHub\Vue.NetCore\开发版dev\Vue.NetCore\Vue.Net\VOL.Manager\bin\Debug\netcoreapp3.1\VOL.Manager.pdb
+E:\GitHub\Vue.NetCore\开发版dev\Vue.NetCore\Vue.Net\VOL.Manager\bin\Debug\netcoreapp3.1\VOL.Core.dll
+E:\GitHub\Vue.NetCore\开发版dev\Vue.NetCore\Vue.Net\VOL.Manager\bin\Debug\netcoreapp3.1\VOL.Entity.dll
+E:\GitHub\Vue.NetCore\开发版dev\Vue.NetCore\Vue.Net\VOL.Manager\bin\Debug\netcoreapp3.1\VOL.Core.pdb
+E:\GitHub\Vue.NetCore\开发版dev\Vue.NetCore\Vue.Net\VOL.Manager\bin\Debug\netcoreapp3.1\VOL.Entity.pdb
+E:\GitHub\Vue.NetCore\开发版dev\Vue.NetCore\Vue.Net\VOL.Manager\obj\Debug\netcoreapp3.1\VOL.Manager.csproj.CopyComplete
+E:\GitHub\Vue.NetCore\开发版dev\Vue.NetCore\Vue.Net\VOL.Manager\obj\Debug\netcoreapp3.1\VOL.Manager.dll
+E:\GitHub\Vue.NetCore\开发版dev\Vue.NetCore\Vue.Net\VOL.Manager\obj\Debug\netcoreapp3.1\VOL.Manager.pdb
