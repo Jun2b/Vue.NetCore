@@ -38,10 +38,11 @@ namespace VOL.Entity.DomainModels
        ///卡号
        /// </summary>
        [Display(Name ="卡号")]
-       [Column(TypeName="int")]
+       [MaxLength(32)]
+       [Column(TypeName="nvarchar(32)")]
        [Editable(true)]
        [Required(AllowEmptyStrings=false)]
-       public int Card_No { get; set; }
+       public string Card_No { get; set; }
 
        /// <summary>
        ///密码
@@ -95,12 +96,12 @@ namespace VOL.Entity.DomainModels
        public string Remark { get; set; }
 
        /// <summary>
-       ///礼券定价
+       ///价格
        /// </summary>
-       [Display(Name ="礼券定价")]
+       [Display(Name ="价格")]
        [Column(TypeName="decimal")]
        [Editable(true)]
-       public decimal? Pirce { get; set; }
+       public decimal? Price { get; set; }
 
        /// <summary>
        ///销售客户

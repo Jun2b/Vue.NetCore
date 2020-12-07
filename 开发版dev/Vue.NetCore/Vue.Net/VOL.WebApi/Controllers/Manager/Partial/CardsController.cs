@@ -29,5 +29,17 @@ namespace VOL.Manager.Controllers
             _service = service;
             _httpContextAccessor = httpContextAccessor;
         }
+
+        /// <summary>
+        /// 2020.06.15增加登陆验证码
+        /// </summary>
+        /// <returns></returns>
+        [HttpPost, Route("generateCards")]
+        public async Task<IActionResult> GenerateCards([FromBody]CardsSet cardsSet)
+        {
+            return Json(await _service.CardsGenerate(cardsSet));
+        }
+
+
     }
 }
