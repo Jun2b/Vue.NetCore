@@ -31,7 +31,7 @@ namespace VOL.Manager.Controllers
         }
 
         /// <summary>
-        /// 2020.06.15增加登陆验证码
+        /// 2020.12.08增加批量生成卡密
         /// </summary>
         /// <returns></returns>
         [HttpPost, Route("generateCards")]
