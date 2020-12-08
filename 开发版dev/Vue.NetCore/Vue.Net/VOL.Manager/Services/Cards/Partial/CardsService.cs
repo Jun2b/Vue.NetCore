@@ -73,9 +73,6 @@ namespace VOL.Manager.Services
                 card.Strategy_Id = cardsSet.Strategy_Id;
                 card.Remark = cardsSet.Remark;
                 card.Sku_Id = cardsSet.Sku_Id;
-                card.CreateDate=DateTime.Now;
-                card.CreateID = UserContext.Current.UserId;
-                card.Creator = UserContext.Current.UserName;
                 cardslist.Add(card);
             }
             _repository.AddRange(cardslist,true);
