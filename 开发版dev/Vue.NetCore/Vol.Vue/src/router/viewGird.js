@@ -57,5 +57,9 @@ let viewgird = [
         path: '/Cards',
         name: 'Cards',
         component: () => import('@/views/manager/Cards.vue')
+    }    ,{
+        path: '/CardsCreate',
+        name: 'CardsCreate',
+        component: () => import('@/views/manager/CardsCreate.vue')
     }]
 export default viewgird

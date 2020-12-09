@@ -83,8 +83,7 @@ namespace VOL.Entity.DomainModels
        [Display(Name ="商品名称")]
        [Column(TypeName="int")]
        [Editable(true)]
-       [Required(AllowEmptyStrings=false)]
-       public int Goods_Id { get; set; }
+       public int? Goods_Id { get; set; }
 
        /// <summary>
        ///礼券备注
@@ -99,6 +98,7 @@ namespace VOL.Entity.DomainModels
        ///价格
        /// </summary>
        [Display(Name ="价格")]
+       [DisplayFormat(DataFormatString="10,2")]
        [Column(TypeName="decimal")]
        [Editable(true)]
        public decimal? Price { get; set; }
