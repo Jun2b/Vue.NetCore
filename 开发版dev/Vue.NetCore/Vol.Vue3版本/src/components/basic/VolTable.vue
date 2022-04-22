@@ -278,6 +278,7 @@
                 size="small"
                 :class="[isEmptyTag(scope.row, column)]"
                 :type="getColor(scope.row, column)"
+                :effect="column.effect"
                 >{{ formatter(scope.row, column, true) }}</el-tag
               >
             </template>
@@ -364,13 +365,13 @@ export default defineComponent({
     },
     linkView: {
       type: Function,
-      default: function() {
+      default: function () {
         return 1;
       }
     },
     pagination: {
       type: Object,
-      default: function() {
+      default: function () {
         return { total: 0, size: 30, sortName: '' };
       }
     },
@@ -417,21 +418,21 @@ export default defineComponent({
     beginEdit: {
       // 编辑开始
       type: Function,
-      default: function(row, column, index) {
+      default: function (row, column, index) {
         return true;
       }
     },
     endEditBefore: {
       // 结束编辑前
       type: Function,
-      default: function(row, column, index) {
+      default: function (row, column, index) {
         return true;
       }
     },
     endEditAfter: {
       // 结束编辑前
       type: Function,
-      default: function(row, column, index) {
+      default: function (row, column, index) {
         return true;
       }
     },
@@ -524,9 +525,8 @@ export default defineComponent({
     });
     //2021.09.21移除强制固定行号与checkbox列
     if (
-      this.fxRight ||
       this.columns.some((x) => {
-        return x.fixed;
+        return x.fixed&&x.fixed != 'right';
       })
     ) {
       this.fixed = true;
@@ -1136,6 +1136,9 @@ export default defineComponent({
           this.paginations.total = data.total;
           // 合计
           this.getSummaries(data);
+          this.$nextTick(()=>{
+              this.$refs.table.doLayout();
+          })
         },
         (error) => {
           this.loading = false;
@@ -1429,15 +1432,14 @@ export default defineComponent({
 .v-table ::v-deep(.el-date-editor .el-icon-time) {
   width: 10px;
 }
-
-.vol-table.fx-right ::v-deep(.el-table__header th:last-child) {
-  border-left: 1px solid #eff1f5;
-}
-.vol-table.fx-right ::v-deep(.el-table__row) {
-  td:last-child {
-    border-left: 1px solid #eff1f5;
-  }
-}
+// .vol-table.fx-right ::v-deep(.el-table__row) {
+//   td:last-child {
+//     border-left: 1px solid #eff1f5;
+//   }
+// }
+// .vol-table.fx-right ::v-deep(.el-table__header th:last-child) {
+//   border-left: 1px solid #eff1f5;
+// }
 </style>
 
 <style scoped>
@@ -1467,7 +1469,7 @@ export default defineComponent({
   padding: 3px !important;
 }
 .vol-table.text-inline ::v-deep(.el-table__body .cell),
-.vol-table ::v-deep(.el-table__header-wrapper .cell) {
+.vol-table.text-inline ::v-deep(.el-table__header-wrapper .cell) {
   word-break: inherit !important;
   white-space: nowrap !important;
 }
@@ -1497,7 +1499,8 @@ export default defineComponent({
   cursor: pointer;
 }
 
-.vol-table.chrome ::v-deep(.el-table__fixed) {
+.vol-table.chrome ::v-deep(.el-table__fixed),
+.vol-table.chrome ::v-deep(.el-table__fixed-right) {
   height: calc(100% - 8px) !important;
   /* background: white; */
   /* box-shadow: 0px -11px 10px rgb(0 0 0 / 12%) !important; */
@@ -1514,4 +1517,12 @@ export default defineComponent({
 .vol-table.chrome ::v-deep(.el-table__fixed:before) {
   background-color: unset;
 }
+.vol-table.chrome ::v-deep(.el-table__fixed-right) {
+     right: 8px !important;
+}
+.vol-table.chrome ::v-deep(.el-table__fixed-right:before) {
+    height: 0 !important;
+}
+
+
 </style>
